@@ -1,1 +1,6 @@
 /Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/BookshelfApplication.java
+/Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/config/CorsConfig.java
+/Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/controller/RegistrationController.java
+/Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/model/Registration.java
+/Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/repository/RegistrationRepository.java
+/Users/danielbabalola/Desktop/SpringBoot Apps/BookShelf/BookshelfApp/backend/src/main/java/com/springjwt/Bookshelf/service/RegistrationService.java
