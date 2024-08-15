@@ -1,6 +1,8 @@
 package com.springjwt.Bookshelf.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,8 +15,13 @@ public class Registration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
+
+    @JsonIgnore 
     private String password;
+
     private String email;
+    
+    public Registration() {}
 
     public Long getId() {
         return id;
