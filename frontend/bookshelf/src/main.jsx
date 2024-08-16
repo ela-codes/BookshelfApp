@@ -9,20 +9,6 @@ import "./index.css";
 import SignUP from './sign-up.jsx';
 import NotFound from './NotFound.jsx';
 
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <App />
-//   },
-//   {
-//     path: '/sign-up',
-//     element: <SignUP />,
-//   },
-//   {
-//     path: '*', 
-//     element: <NotFound /> 
-//   }
-// ]);
 const router = createBrowserRouter([
   {
     path: "/",
