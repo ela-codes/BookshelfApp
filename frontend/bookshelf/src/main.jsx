@@ -8,6 +8,9 @@ import App from './App';
 import "./index.css";
 import SignUP from './sign-up.jsx';
 import NotFound from './NotFound.jsx';
+import Profile from './profile.jsx'
+import User from './user.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,14 @@ const router = createBrowserRouter([
   {
         path: '/sign-up',
         element: <SignUP />,
+  },
+  {
+    path: '/profile',
+    element: <Profile />,
+  },
+  {
+    path: '/user',
+    element: <User />,
   },
   {
         path: '*', 

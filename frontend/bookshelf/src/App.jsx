@@ -53,7 +53,8 @@ const signIn = async(username, password)=>{
        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover 
         style={{ fontSize: '1.2rem', padding: '20px', width: '400px' }}
        />
-      <div className="hidden md:flex w-1/2 ">
+      <div className="hidden md:flex w-1/2 relative">
+        <h1 className='absolute inset-0 flex justify-center items-center text-white text-9xl'>Public content</h1>
         <img src={Image} alt="" className="w-full h-screen object-cover" />
       </div>
       <div className="flex flex-col w-full justify-center items-center px-4 md:w-1/2 md:px-16">

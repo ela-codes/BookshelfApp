@@ -1,7 +1,7 @@
 import {
   GenIcon
-} from "./chunk-SZNTHMY5.js";
-import "./chunk-TDHIGYL4.js";
+} from "./chunk-T2SURAQP.js";
+import "./chunk-66VBOVDU.js";
 
 // node_modules/react-icons/fa/index.mjs
 function Fa500Px(props) {

@@ -9,6 +9,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function SignUp() {
 
+  const validateUsername= (username) => {
+    return username.length >=3 && username.length <=20;
+  };
+
   const validateEmail = (email) => {
       
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,7 +21,7 @@ function SignUp() {
       
   const validatePassword = (password) => {
       
-        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/;
+        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{6,40}$/;
         return re.test(String(password));
       };  
 
@@ -26,7 +30,7 @@ function SignUp() {
     username: '',
     email: '',
     password: '',
-    errors: { email: '', password: '' }
+    errors: { email: '', password: '', username:'' }
   });
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,12 +39,15 @@ function SignUp() {
       toast.error("Please fill in all fields");
       return;
     }
-    let errors = { email: '', password: '' };
+    let errors = { email: '', password: '',username:''  };
     if (!validateEmail(form.email)) {
         errors.email = "Please enter a valid email address.";
     }
+    if (!validateUsername(form.username)) {
+      errors.username = "The username must be between 3 and 20 characters.";
+    }
     if (!validatePassword(form.password)) {
-        errors.password = "Password must be at least 8 characters and include a number, a letter, and a special character.";
+        errors.password = "The password must be between 6 and 40 characters.";
     }
     setForm(prev => ({ ...prev, errors }));
     if (errors.email || errors.password) {
@@ -66,8 +73,9 @@ function SignUp() {
   return (
     <div className="flex h-screen">
       <ToastContainer position="top-right" autoClose={5000} style={{ fontSize: '1.2rem', padding: '20px', width: '400px' }}/>
-      <div className="hidden md:flex w-1/2">
-        <img src={Image} alt="Side Panel Image" className="w-full h-screen object-cover" />
+      <div className="hidden md:flex w-1/2 relative">
+        <h1 className='absolute inset-0 flex justify-center items-center text-white text-9xl'>Public content</h1>
+        <img src={Image} alt="" className="w-full h-screen object-cover" />
       </div>
       <div className="flex flex-col w-full justify-center items-center px-4 md:w-1/2 md:px-16">
         <div className="w-full max-w-xl">
@@ -79,6 +87,7 @@ function SignUp() {
             <p className="text-center text-sm text-gray-600">Please enter your details</p>
           </div>
           <form className="space-y-4">
+          <div className="relative">
             <input
               type="text"
               placeholder="Username"
@@ -86,6 +95,8 @@ function SignUp() {
               onChange={(e) => setForm(prev => ({ ...prev, username: e.target.value }))}
               className="w-full h-12 p-2 border-b border-b-gray-400 hover:border-blue-500 focus:border-blue-500 outline-none"
             />
+            {form.errors.username && <p className="text-red-500 text-base italic">{form.errors.username}</p>}
+            </div>
             <div className="relative">
             <input
               type="text"
