@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Nav from './components/Nav'
 
 const profile = () => {
-  const user = { name: 'A user',
+  const user = { 
+                token:'34345345',
+                name: 'A user',
                  id: 'id'  ,
                  email:'email',
                  authorities:'admin' 
