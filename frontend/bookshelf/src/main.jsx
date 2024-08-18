@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-        path: '/sign-up',
-        element: <SignUP />,
+    path: '/sign-up',
+    element: <SignUP />,
   },
   {
     path: '/profile',
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
     element: <User />,
   },
   {
-        path: '*', 
-        element: <NotFound /> 
+    path: '*', 
+    element: <NotFound /> 
   }
 
 ]);
