@@ -1,14 +1,14 @@
-import React, { useState,useContext  } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logout from './logout';
 import useAuth from '../hooks/useAuth';
 
 const Nav = () => {
-const [showLogoutModal, setShowLogoutModal] = useState(false);
-const navigate = useNavigate();
-const { auth } = useAuth(); 
-const isAdmin = auth?.roles?.includes(2);
-const isModerator = auth?.roles?.includes(3);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const navigate = useNavigate();
+  const { auth } = useAuth();
+  const isAdmin = auth?.roles?.includes(2);
+  const isModerator = auth?.roles?.includes(3);
 
   return (
     <div>

@@ -61,7 +61,7 @@ const handleSubmit = async (e) => {
       const roles = loggedInUser.roles;
       const accessToken = "fake-jwt-token-for-testing";
 
-      setAuth({ user, roles, accessToken });
+      setAuth({ user: { name: user }, roles, accessToken });
       setUser('');
       setPwd('');
 
