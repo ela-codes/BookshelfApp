@@ -10,18 +10,6 @@ import axios from './api/axios';
 import useAuth from './hooks/useAuth';
 
 const LOGIN_URL = '/auth';
-// test
-const ROLES = {
-  'User': 1,
-  'Admin': 2,
-  'Moderator': 3
-};
-// test
-const users = {
-  'admin': { password: 'adminpass', roles: [ROLES.Admin] },
-  'moderator': { password: 'modpass', roles: [ROLES.Moderator] },
-  'user': { password: 'userpass', roles: [ROLES.User] }
-};
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
@@ -46,7 +34,20 @@ function App() {
     setErrMsg('');
   }, [user, pwd]);
 
-//  test version
+
+// test
+const ROLES = {
+  'User': 1,
+  'Admin': 2,
+  'Moderator': 3
+};
+// test
+const users = {
+  'admin': { password: 'adminpass', roles: [ROLES.Admin] },
+  'moderator': { password: 'modpass', roles: [ROLES.Moderator] },
+  'user': { password: 'userpass', roles: [ROLES.User] }
+};
+// test 
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -89,7 +90,7 @@ const handleSubmit = async (e) => {
   //     const accessToken = response?.data?.accessToken;
   //     const roles = response?.data?.roles;
   //     setAuth({
-  //       user, pwd, roles, accessToken
+  //       user: { name: user }, pwd, roles, accessToken
   //     })
   //     setUser('');
   //     setPwd('');
