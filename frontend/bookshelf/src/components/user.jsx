@@ -1,7 +1,5 @@
 import React from 'react'
-import Logo from "./assets/logo.jpg";
-import { Link } from 'react-router-dom';
-import Nav from './components/Nav'
+import Nav from './Nav'
 
 const user = () => {
   const user = { name: 'A user',

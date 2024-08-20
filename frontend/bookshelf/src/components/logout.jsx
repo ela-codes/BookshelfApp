@@ -1,14 +1,14 @@
 import React from 'react';
+import useAuth from '../hooks/useAuth';
 
 function Logout({ show, onClose, }) {
+    const { logout } = useAuth();
     if (!show) {
         return null;
     }
 
     const handleLogout = () => {
-        
-        // localStorage.removeItem('token');  
-        // localStorage.removeItem('user');   
+        logout();
 
         window.location.href = '/';
 

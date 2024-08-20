@@ -11,7 +11,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^.{6,40}$/;
 const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
 
-const register_url = '/reguister';
+const REGISTER_URL ='/reguister';
 
 function SignUp() {
 
@@ -68,7 +68,7 @@ function SignUp() {
     // console.log(user,pwd);
     // setSuccess(true);
     try {
-      const response = await axios.post(register_url, JSON.stringify({
+      const response = await axios.post(REGISTER_URL, JSON.stringify({
           user,
           pwd,
           email
