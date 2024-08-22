@@ -6,7 +6,7 @@ import GoogleSvg from "./assets/icons8-google.svg";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
-import axios from './api/axios';
+import axios from './api/axios.jsx';
 import useAuth from './hooks/useAuth';
 
 const LOGIN_URL = '/auth';

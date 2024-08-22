@@ -5,7 +5,7 @@ import Logo from "./assets/logo.jpg";
 import { FaEye, FaEyeSlash, FaCheck, FaTimes } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from './api/axios';
+import axios from './api/axios.jsx';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^.{6,40}$/;
