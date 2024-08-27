@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL ="";
+const BASE_URL ="xxxxx";
 
 export default axios.create({
     baseURL:BASE_URL

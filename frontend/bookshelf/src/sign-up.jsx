@@ -11,7 +11,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^.{6,40}$/;
 const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
 
-const REGISTER_URL ='/reguister';
+const REGISTER_URL ='/register';
 
 function SignUp() {
 

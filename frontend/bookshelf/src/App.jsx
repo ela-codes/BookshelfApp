@@ -23,7 +23,7 @@ function App() {
 
   const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   const [errMsg, setErrMsg] = useState('');
 
   useEffect(() => {

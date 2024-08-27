@@ -1,6 +1,7 @@
 import {useState,useEffect} from "react"
-import axios from "../api/axios.jsx";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import Nav from './Nav'
+import { useNavigate, useLocation} from "react-router-dom";
 
 const user = () => {
   // const user = { name: 'A user',
@@ -9,21 +10,26 @@ const user = () => {
   //                authorities:'admin' 
   //  };
 
-  const[users,SetUsers] = useState([]);
+  const[users,SetUsers] = useState();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const axiosPrivate = useAxiosPrivate();
 
   useEffect(()=> {
       let isMounted = true;
       const controller = new AbortController();
+      
 
       const getUsers = async () =>{
         try {
-          const response = await axios.get('/user',{
+          const response = await axiosPrivate.get('/user',{
               signal:controller.signal
           });
           console.log(response.data)
           isMounted && SetUsers(response.data)
         } catch (err) {
           console.error(err)
+          navigate('/',{state:{ from:location}, replace:true}); 
         }
       }
 
