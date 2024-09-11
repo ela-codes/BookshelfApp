@@ -18,13 +18,13 @@ import com.springjwt.Bookshelf.model.Registration;
 import com.springjwt.Bookshelf.service.RegistrationService;
 
 @RestController
-@RequestMapping("/api/registrations")
-public class RegistrationController {
+@RequestMapping
+public class UserController {
 
     @Autowired
     private RegistrationService registrationService;
 
-    @PostMapping
+    @PostMapping("/registration")
     public ResponseEntity<Registration> createUser(@RequestBody Registration registration) {
         Registration savedRegistration = registrationService.registerUser(registration);
         return ResponseEntity.ok(savedRegistration);
@@ -53,4 +53,10 @@ public class RegistrationController {
         registrationService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/login")
+    public String welcome(){
+        return "hello!";
+    }
+
 }

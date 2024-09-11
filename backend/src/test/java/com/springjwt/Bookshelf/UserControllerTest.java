@@ -23,17 +23,17 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.springjwt.Bookshelf.controller.RegistrationController;
+import com.springjwt.Bookshelf.controller.UserController;
 import com.springjwt.Bookshelf.model.Registration;
 import com.springjwt.Bookshelf.service.RegistrationService;
 
-public class RegistrationControllerTest {
+public class UserControllerTest {
 
     @Mock
     private RegistrationService registrationService;
 
     @InjectMocks
-    private RegistrationController registrationController;
+    private UserController registrationController;
 
     private MockMvc mockMvc;
 
