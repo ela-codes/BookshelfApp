@@ -54,9 +54,10 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/login")
-    public String welcome(){
-        return "hello!";
+    // temporary home page endpoint
+    @GetMapping("/home")
+    public String home() {
+        return "Welcome to the Bookshelf!";
     }
 
 }
