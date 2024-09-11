@@ -3,8 +3,11 @@ package com.springjwt.Bookshelf.controller;
 import java.util.List;
 import java.util.Optional;
 
+import com.springjwt.Bookshelf.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,11 +21,13 @@ import com.springjwt.Bookshelf.model.Registration;
 import com.springjwt.Bookshelf.service.RegistrationService;
 
 @RestController
-@RequestMapping
 public class UserController {
 
     @Autowired
     private RegistrationService registrationService;
+
+    @Autowired
+    private LoginService loginService;
 
     @PostMapping("/registration")
     public ResponseEntity<Registration> createUser(@RequestBody Registration registration) {
@@ -60,4 +65,8 @@ public class UserController {
         return "Welcome to the Bookshelf!";
     }
 
+    @PostMapping("/login")
+    public String login(@RequestBody Registration user) {
+        return loginService.verify(user);
+    }
 }

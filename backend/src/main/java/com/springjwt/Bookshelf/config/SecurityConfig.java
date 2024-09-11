@@ -13,6 +13,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -20,6 +21,9 @@ public class SecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    private JwtFilter jwtFilter;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -32,12 +36,19 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // Disable CSRF since we're using JWT
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("registration", "login").permitAll()  // permit login and register pages
+                        .requestMatchers(
+                                "/registration",
+                                "/login").permitAll()
                         .anyRequest().authenticated()) // authenticate all other endpoints
-                .formLogin(form -> form
-                        .defaultSuccessUrl("/home", true) // redirect to home page on successful login
-                        .failureUrl("/login?error=true") // redirect to login page on failure
-                        .permitAll())
+
+                // DISABLE LOGIN FORM UI FOR NOW
+//                .formLogin(form -> form
+//                        .loginPage("/login") // login page URL
+//                        .defaultSuccessUrl("/home", true) // redirect to home page on successful login
+//                        .failureUrl("/login?error=true") // redirect to login page on failure
+//                        .permitAll())
+
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
