@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c307c6c-d9db-4642-a769-0df7fd40b324" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/model/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/repository/RegistrationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/service/RegistrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/springjwt/Bookshelf/RegistrationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/springjwt/Bookshelf/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/springjwt/Bookshelf/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/controller/RegistrationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/repository/RegistrationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/repository/RegistrationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/service/RegistrationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/service/RegistrationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/springjwt/Bookshelf/RegistrationControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/springjwt/Bookshelf/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

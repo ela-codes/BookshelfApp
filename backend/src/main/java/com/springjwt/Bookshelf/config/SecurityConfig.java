@@ -28,17 +28,15 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(csrf -> csrf.disable()) // Disable CSRF since we're using JWT
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("registration", "login")
-                        .permitAll() // permit login and register pages
-                        .anyRequest().authenticated()) // authenticate all other requests
+                        .requestMatchers("registration", "login").permitAll()  // permit login and register pages
+                        .anyRequest().authenticated()) // authenticate all other endpoints
                 .formLogin(form -> form
-                        .permitAll() // Set custom login page
-                        .defaultSuccessUrl("/home", true) // Redirect on successful login
-                        .failureUrl("/login?error=true")) // Redirect on failure
+                        .defaultSuccessUrl("/home", true) // redirect to home page on successful login
+                        .failureUrl("/login?error=true") // redirect to login page on failure
+                        .permitAll())
                 .build();
-
     }
 
     @Bean
