@@ -16,7 +16,6 @@ public class Registration {
     private Long id;
     private String username;
 
-    @JsonIgnore 
     private String password;
 
     private String email;
