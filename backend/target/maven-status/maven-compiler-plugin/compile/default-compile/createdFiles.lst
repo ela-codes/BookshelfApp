@@ -1,0 +1,7 @@
+com/springjwt/Bookshelf/repository/RegistrationRepository.class
+com/springjwt/Bookshelf/config/CorsConfig.class
+com/springjwt/Bookshelf/config/SecurityConfig.class
+com/springjwt/Bookshelf/controller/RegistrationController.class
+com/springjwt/Bookshelf/model/Registration.class
+com/springjwt/Bookshelf/BookshelfApplication.class
+com/springjwt/Bookshelf/service/RegistrationService.class
